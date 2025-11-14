@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-MOOSIC - Humble Mood 🕊️</title>
+    <link rel="stylesheet" href="../style.css">
+    
+    <script src="../data.js"></script>
+    <script src="../scripts.js" defer></script>
+</head>
+
+<body>
+
+    <div id="sidebar-trigger"></div>
+
+    <header>
+        <h1>Z-MOOSIC</h1>
+        <button id="admin-toggle">Admin: OFF</button>
+    </header>
+
+    <aside id="sidebar">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                
+                <li id="charts-menu-item">
+                    <a href="#">📈 Z-MOOSIC Charts ▼</a>
+                    <ul class="submenu">
+                        <li><a href="../charts/daily.html">🔥 Daily Chart</a></li>
+                        <li><a href="../charts/weekly.html">🏆 Weekly Chart</a></li>
+                    </ul>
+                </li>
+                
+                <li id="top-songs-menu-item">
+                    <a href="#" class="active-parent">Moods ▼</a>
+                    <ul class="submenu">
+                        <li><a href="happy.html">😄 Happy</a></li>
+                        <li><a href="sad.html">😭 Sad</a></li>
+                        <li><a href="romantic.html">💖 Romantic</a></li>
+                        <li><a href="energetic.html">⚡️ Energetic</a></li>
+                        <li><a href="chill.html">😌 Chill</a></li>
+                        <li><a href="focused.html">🧠 Focused</a></li>
+                        <li><a href="angry.html">😡 Angry</a></li>
+                        <li><a href="nostalgic.html">🕰️ Nostalgic</a></li>
+                        <li><a href="sleepy.html">😴 Sleepy</a></li>
+                        <li><a href="confident.html">😎 Confident</a></li>
+                        <li><a href="mysterious.html">🕵️ Mysterious</a></li>
+                        <li><a href="determined.html">💪 Determined</a></li>
+                        <li><a href="playful.html">🥳 Playful</a></li>
+                        <li><a href="anxious.html">😬 Anxious</a></li>
+                        <li><a href="bored.html">🥱 Bored</a></li>
+                        <li><a href="calm.html">🧘 Calm</a></li>
+                        <li><a href="reflective.html">🤔 Reflective</a></li>
+                        <li><a href="grateful.html">🙏 Grateful</a></li>
+                        <li><a href="elegant.html">🥂 Elegant</a></li>
+                        <li><a href="chaotic.html">💥 Chaotic</a></li>
+                        <li><a href="weird.html">👽 Weird</a></li>
+                        <li><a href="humble.html" class="active">🕊️ Humble</a></li>
+                        <li><a href="spiritual.html">✨ Spiritual</a></li>
+                        <li><a href="epic.html">⚔️ Epic</a></li>
+                        <li><a href="sensual.html">🔥 Sensual</a></li>
+                        <li><a href="vintage.html">📻 Vintage</a></li>
+                        <li><a href="wanderlust.html">🗺️ Wanderlust</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="../recommend/submit.html">✨ Recommend a Song</a></li>
+                <li><a href="#">Future Updates!</a></li>
+                
+                <hr id="admin-separator" class="hidden-control">
+                
+                <li id="admin-controls-section" class="hidden-control">
+                    <a href="#">🛠 Admin Controls ▼</a>
+                    <ul class="submenu">
+                        <li style="padding: 0; margin-top: 5px;">
+                            <button id="reset-recs-btn" class="admin-control-button"
+                                    style="width: 100%; border-radius: 0; background-color: #d9534f;">
+                                Reset Weekly Recommendations
+                            </button>
+                        </li>
+                        <li><a href="../admin/review.html">Review Submissions</a></li>
+                        <li><a href="../admin/settings.html">Site Settings</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <h2>Humble Mood 🕊️</h2>
+        
+        <section id="curated-playlist" class="content-section">
+            <h2>Curated Playlist (50 Songs)</h2>
+            <ul id="playlist-list">
+                </ul>
+        </section>
+
+        <section id="recommended-songs" class="content-section">
+            <h2>Community Recommendations ✨</h2>
+            <p>Songs submitted by users, sorted by number of recommendations.</p>
+            <ul id="recommendation-list">
+                </ul>
+        </section>
+
+        <section id="top-songs-chart" class="content-section">
+            <h2>Top 10 Chart 📊</h2>
+            <p>The most recommended songs in this playlist.</p>
+            <ul id="chart-list">
+                </ul>
+        </section>
+    </main>
+    
+    <footer id="now-playing-bar">
+        <div id="player-content">
+            <p>Click a song to start playing!</p>
+        </div>
+        <div id="controls-placeholder" style="display:none;">
+            <p>Custom controls will go here in a future update!</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

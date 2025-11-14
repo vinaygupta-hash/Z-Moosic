@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Discovery Quiz - Z-MOOSIC</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Z-MOOSIC</h1>
+        <button id="admin-toggle">Admin</button>
+    </header>
+
+    <div id="sidebar-trigger"></div>
+    <div id="sidebar">
+        </div>
+
+    <main>
+        <div class="content-section">
+            <h2 id="quiz-title">Mood Discovery Quiz</h2>
+            <div id="quiz-container">
+                
+                <div id="quiz-container">
+
+    <div class="quiz-step" data-step="1">
+        <h3>Question 1: If you had to stand up right now, how would you move?</h3>
+        <ul class="quiz-options">
+            <li data-value="A_HIGH">🕺 A quick, energetic skip or dance.</li>
+            <li data-value="A_MED">🚶 A normal, purposeful walk.</li>
+            <li data-value="A_LOW">🐢 A slow, heavy shuffle.</li>
+            <li data-value="A_ZERO">🪑 I wouldn't. Too much effort.</li>
+        </ul>
+    </div>
+
+    <div class="quiz-step hidden" data-step="2">
+        <h3>Question 2: What is your general feeling about the next few hours?</h3>
+        <ul class="quiz-options">
+            <li data-value="V_POS">🥳 Optimistic, looking forward to it.</li>
+            <li data-value="V_NEU">🤔 Neutral, I just need to get through my tasks.</li>
+            <li data-value="V_NEG">😔 A bit drained, I wish I were somewhere else.</li>
+        </ul>
+    </div>
+
+    <div class="quiz-step hidden" data-step="3">
+        <h3>Question 3: What do you want the music to *do* to your thoughts?</h3>
+        <ul class="quiz-options">
+            <li data-value="U_FOCUS">🧠 Fill the quiet space, but allow deep concentration.</li>
+            <li data-value="U_DISTRACT">💥 Totally dominate and distract me from everything.</li>
+            <li data-value="U_BACKGROUND">☁️ Blend into the background and create a soothing atmosphere.</li>
+            <li data-value="U_GUIDE">💡 Help me process and organize my complex feelings.</li>
+        </ul>
+    </div>
+    
+    <div class="quiz-step hidden" data-step="4">
+        <h3>Question 4: If you could set the volume to your mood, where would it be?</h3>
+        <ul class="quiz-options">
+            <li data-value="A_HIGH">🔊 Blasting—the louder, the better.</li>
+            <li data-value="A_MED">🎶 Medium—clear and noticeable.</li>
+            <li data-value="A_LOW">🤫 So quiet I can barely hear it.</li>
+        </ul>
+    </div>
+
+    <div class="quiz-step hidden" data-step="5">
+        <h3>Question 5: Who is the music primarily for right now?</h3>
+        <ul class="quiz-options">
+            <li data-value="V_POS">👥 Me and a group of friends/others.</li>
+            <li data-value="V_NEG">👤 Just me, nobody else.</li>
+        </ul>
+    </div>
+
+    <div class="quiz-step hidden" data-step="6">
+        <h3>Question 6: Do you need comfort or discovery?</h3>
+        <ul class="quiz-options">
+            <li data-value="U_BACKGROUND">🧸 Comfort and nostalgia—songs I already love.</li>
+            <li data-value="U_DISTRACT">🗺️ Discovery—I want to be surprised by new sounds.</li>
+        </ul>
+    </div>
+
+    <div class="quiz-step hidden" data-step="7">
+        <h3>Question 7: How complex should the beat be?</h3>
+        <ul class="quiz-options">
+            <li data-value="A_HIGH">🥁 Pounding, fast, or complicated rhythms.</li>
+            <li data-value="A_MED">🥁 A steady, predictable pulse.</li>
+            <li data-value="A_LOW">🎼 No discernible beat, just flowing sound.</li>
+        </ul>
+    </div>
+
+    <div class="quiz-step hidden" data-step="8">
+        <h3>Question 8: Do you feel the urge to reflect on the past or focus on the present?</h3>
+        <ul class="quiz-options">
+            <li data-value="V_NEG">🕰️ Reflective, maybe even a little melancholic.</li>
+            <li data-value="V_POS">🎁 Present-focused and optimistic.</li>
+        </ul>
+    </div>
+
+    <div class="quiz-step hidden" data-step="9">
+        <h3>Question 9: How do you feel about vocals?</h3>
+        <ul class="quiz-options">
+            <li data-value="U_FOCUS">🤐 Preferably instrumental (lyrics distract me).</li>
+            <li data-value="U_GUIDE">🗣️ Vocals are essential (I need to hear a message).</li>
+        </ul>
+    </div>
+
+    <div class="quiz-step hidden" data-step="10">
+        <h3>Question 10: Your ideal speed for a heartbeat right now is...</h3>
+        <ul class="quiz-options">
+            <li data-value="A_HIGH">🐇 Very fast, like a quick sprint.</li>
+            <li data-value="A_LOW">🐌 Very slow, like a deep breath.</li>
+            <li data-value="A_MED">🐕 Normal resting pace.</li>
+        </ul>
+    </div>
+
+    <div id="quiz-result" class="hidden">
+        <h3>We've analyzed your state!</h3>
+        <p>Based on your 10 responses, we recommend the **<span id="result-mood-name"></span>** playlist.</p>
+        <a href="#" id="result-link" class="play-link" style="max-width: 250px; margin: 20px auto; background-color: var(--neon-blue); color: var(--bg-dark);">Go to Playlist</a>
+        <button id="reset-quiz" class="play-link" style="max-width: 250px; margin: 10px auto; background-color: var(--border-color); color: var(--text-light); border: none;">Restart Quiz</button>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </main>
+
+    <div id="now-playing-bar">
+        </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>

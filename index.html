@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-MOOSIC - Select Your Mood</title>
+    <link rel="stylesheet" href="../style.css">
+    
+    <script src="../data.js"></script>
+    <script src="../scripts.js" defer></script>
+</head>
+
+<body>
+
+    <div id="sidebar-trigger"></div>
+
+    <header>
+        <h1>Z-MOOSIC</h1>
+        <button id="admin-toggle">Admin Tools</button>
+    </header>
+
+    
+    <aside id="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                
+                <li id="charts-menu-item">
+                    <a href="#">📈 Z-MOOSIC Charts ▼</a>
+                    <ul class="submenu">
+                        <li><a href="../charts/daily.html">🔥 Daily Chart</a></li>
+                        <li><a href="../charts/weekly.html">🏆 Weekly Chart</a></li>
+                    </ul>
+                </li>
+                
+                <li id="top-songs-menu-item">
+                    <a href="#">Moods ▼</a>
+                    <ul class="submenu">
+                        <li><a href="moods/happy.html">😄 Happy</a></li>
+                        <li><a href="moods/sad.html">😭 Sad</a></li>
+                        <li><a href="moods/romantic.html">💖 Romantic</a></li>
+                        <li><a href="moods/energetic.html">⚡️ Energetic</a></li>
+                        <li><a href="moods/chill.html">😌 Chill</a></li>
+                        <li><a href="moods/focused.html">🧠 Focused</a></li>
+                        <li><a href="moods/angry.html">😡 Angry</a></li>
+                        <li><a href="moods/nostalgic.html">🕰️ Nostalgic</a></li>
+                        <li><a href="moods/sleepy.html">😴 Sleepy</a></li>
+                        <li><a href="moods/confident.html">😎 Confident</a></li>
+                        <li><a href="moods/mysterious.html">🕵️ Mysterious</a></li>
+                        <li><a href="moods/determined.html">💪 Determined</a></li>
+                        <li><a href="moods/playful.html">🥳 Playful</a></li>
+                        <li><a href="moods/anxious.html">😬 Anxious</a></li>
+                        <li><a href="moods/bored.html">🥱 Bored</a></li>
+                        <li><a href="moods/calm.html">🧘 Calm</a></li>
+                        <li><a href="moods/reflective.html">🤔 Reflective</a></li>
+                        <li><a href="moods/grateful.html">🙏 Grateful</a></li>
+                        <li><a href="moods/elegant.html">🥂 Elegant</a></li>
+                        <li><a href="moods/chaotic.html">💥 Chaotic</a></li>
+                        <li><a href="moods/weird.html">👽 Weird</a></li>
+                        <li><a href="moods/humble.html">🕊️ Humble</a></li>
+                        <li><a href="moods/spiritual.html">✨ Spiritual</a></li>
+                        <li><a href="moods/epic.html">⚔️ Epic</a></li>
+                        <li><a href="moods/sensual.html">🔥 Sensual</a></li>
+                        <li><a href="moods/vintage.html">📻 Vintage</a></li>
+                        <li><a href="moods/wanderlust.html">🗺️ Wanderlust</a></li>
+                        </ul>
+                </li>
+                
+                <li><a href="../recommend/submit.html">✨ Recommend a Song</a></li>
+                <li><a href="#">Future Updates!</a></li>
+                
+                <hr id="admin-separator" class="hidden-control">
+                
+                <li id="admin-controls-section" class="hidden-control">
+                    <a href="#">🛠 Admin Controls ▼</a>
+                    <ul class="submenu">
+                        <li style="padding: 0; margin-top: 5px;">
+                            <button id="reset-recs-btn" class="admin-control-button"
+                                            style="width: 100%; border-radius: 0; background-color: #d9534f;">
+                                Reset Weekly Recommendations
+                            </button>
+                        </li>
+                        
+                        <li><a href="../admin/review.html">Review Submissions</a></li>
+                        <li><a href="../admin/settings.html">Site Settings</a></li>
+                        </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <h2>Discover Music by Mood</h2>
+
+        
+        
+        <section id="mood-selection">
+            
+            <a href="moods/happy.html" class="mood-box">
+                <span class="emoji">😄</span>
+                <h2>Happy</h2>
+                <p>Uplifting tracks for boosting your spirits.</p>
+            </a>
+            
+            <a href="moods/sad.html" class="mood-box">
+                <span class="emoji">😭</span>
+                <h2>Sad</h2>
+                <p>For when you need a good cry or thoughtful reflection.</p>
+            </a>
+            
+            <a href="moods/romantic.html" class="mood-box">
+                <span class="emoji">💖</span>
+                <h2>Romantic</h2>
+                <p>Swoon-worthy tracks for date night or daydreaming.</p>
+            </a>
+            
+            <a href="moods/energetic.html" class="mood-box">
+                <span class="emoji">⚡️</span>
+                <h2>Energetic</h2>
+                <p>High-tempo songs for workouts, cleaning, or getting pumped.</p>
+            </a>
+            
+            <a href="moods/chill.html" class="mood-box">
+                <span class="emoji">😌</span>
+                <h2>Chill</h2>
+                <p>Relaxing beats for unwinding after a long day.</p>
+            </a>
+            
+            <a href="moods/focused.html" class="mood-box">
+                <span class="emoji">🧠</span>
+                <h2>Focused</h2>
+                <p>Instrumentals or ambient sounds to help you concentrate.</p>
+            </a>
+            
+            <a href="moods/angry.html" class="mood-box">
+                <span class="emoji">😡</span>
+                <h2>Angry</h2>
+                <p>Intense tracks for venting frustration or lifting heavy things.</p>
+            </a>
+            
+            <a href="moods/nostalgic.html" class="mood-box">
+                <span class="emoji">🕰️</span>
+                <h2>Nostalgic</h2>
+                <p>Throwback tracks to take you back in time.</p>
+            </a>
+
+            <a href="moods/sleepy.html" class="mood-box">
+                <span class="emoji">😴</span>
+                <h2>Sleepy</h2>
+                <p>Soft melodies and calming sounds for bedtime.</p>
+            </a>
+            
+            <a href="moods/confident.html" class="mood-box">
+                <span class="emoji">😎</span>
+                <h2>Confident</h2>
+                <p>Anthems to make you feel like you can conquer the world.</p>
+            </a>
+
+            <a href="moods/mysterious.html" class="mood-box">
+                <span class="emoji">🕵️</span>
+                <h2>Mysterious</h2>
+                <p>Intriguing and suspenseful tracks for a dramatic atmosphere.</p>
+            </a>
+            
+            <a href="moods/determined.html" class="mood-box">
+                <span class="emoji">💪</span>
+                <h2>Determined</h2>
+                <p>Motivational music for pushing through tough goals.</p>
+            </a>
+
+            <a href="moods/playful.html" class="mood-box">
+                <span class="emoji">🥳</span>
+                <h2>Playful</h2>
+                <p>Fun, upbeat, and quirky songs to get silly with.</p>
+            </a>
+
+            <a href="moods/anxious.html" class="mood-box">
+                <span class="emoji">😬</span>
+                <h2>Anxious</h2>
+                <p>Music that acknowledges the feeling, or helps ground you.</p>
+            </a>
+
+            <a href="moods/bored.html" class="mood-box">
+                <span class="emoji">🥱</span>
+                <h2>Bored</h2>
+                <p>Something to pass the time or inspire your next activity.</p>
+            </a>
+
+            <a href="moods/calm.html" class="mood-box">
+                <span class="emoji">🧘</span>
+                <h2>Calm</h2>
+                <p>Peaceful and serene sounds for deep relaxation or meditation.</p>
+            </a>
+            
+            <a href="moods/reflective.html" class="mood-box">
+                <span class="emoji">🤔</span>
+                <h2>Reflective</h2>
+                <p>Thought-provoking tracks for introspection and soul-searching.</p>
+            </a>
+            
+            <a href="moods/grateful.html" class="mood-box">
+                <span class="emoji">🙏</span>
+                <h2>Grateful</h2>
+                <p>Songs about appreciation and finding positivity.</p>
+            </a>
+            
+            <a href="moods/elegant.html" class="mood-box">
+                <span class="emoji">🥂</span>
+                <h2>Elegant</h2>
+                <p>Sophisticated and classy music for a refined mood.</p>
+            </a>
+            
+            <a href="moods/chaotic.html" class="mood-box">
+                <span class="emoji">💥</span>
+                <h2>Chaotic</h2>
+                <p>Energetic and unpredictable music to embrace the mess.</p>
+            </a>
+            
+            <a href="moods/weird.html" class="mood-box">
+                <span class="emoji">👽</span>
+                <h2>Weird</h2>
+                <p>Unconventional and avant-garde tracks for the abstract thinker.</p>
+            </a>
+            
+            <a href="moods/humble.html" class="mood-box">
+                <span class="emoji">🕊️</span>
+                <h2>Humble</h2>
+                <p>Grounding music focused on simplicity and modesty.</p>
+            </a>
+            
+            <a href="moods/spiritual.html" class="mood-box">
+                <span class="emoji">✨</span>
+                <h2>Spiritual</h2>
+                <p>Music for connection, meditation, and inner peace.</p>
+            </a>
+            
+            <a href="moods/epic.html" class="mood-box">
+                <span class="emoji">⚔️</span>
+                <h2>Epic</h2>
+                <p>Monumental scores and powerful vocals for grand moments.</p>
+            </a>
+            
+            <a href="moods/sensual.html" class="mood-box">
+                <span class="emoji">🔥</span>
+                <h2>Sensual</h2>
+                <p>Smooth, soulful tracks for romantic and intimate settings.</p>
+            </a>
+            
+            <a href="moods/vintage.html" class="mood-box">
+                <span class="emoji">📻</span>
+                <h2>Vintage</h2>
+                <p>Classic sounds from the 40s, 50s, 60s, and beyond.</p>
+            </a>
+            
+            <a href="moods/wanderlust.html" class="mood-box">
+                <span class="emoji">🗺️</span>
+                <h2>Wanderlust</h2>
+                <p>Travel-inspired music to fuel your next adventure.</p>
+            </a>
+            </section>
+    </main>
+
+    
+
+    <div id="now-playing-bar" class="rhythm-glow">
+        <p>Now Playing: Track Title (Rhythm Glow Placeholder)</p>
+    </div>
+    </body>
+
+</html>

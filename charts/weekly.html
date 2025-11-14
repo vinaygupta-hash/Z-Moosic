@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Top 50 Chart | Z-MOOSIC</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <div id="sidebar-trigger"></div>
+
+    <header>
+        <h1 onclick="window.location.href='../index.html'">Z-MOOSIC</h1>
+        <button id="admin-toggle">Admin Tools</button>
+    </header>
+
+    <aside id="sidebar">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li> 
+
+                <li id="charts-menu-item" class="active-link">
+                    <a href="#">📈 Z-MOOSIC Charts ▼</a>
+                    <ul class="submenu">
+                        <li><a href="daily.html">🔥 Daily Chart</a></li>
+                        <li class="active-link"><a href="weekly.html">🏆 Weekly Chart</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-submenu">
+                    <a href="#">Moods</a>
+                    <ul class="submenu">
+                        <li><a href="../moods/happy.html">😄 Happy</a></li>
+                        <li><a href="../moods/sad.html">😭 Sad</a></li>
+                        <li><a href="../moods/romantic.html">💖 Romantic</a></li>
+                        <li><a href="../moods/energetic.html">⚡️ Energetic</a></li>
+                        <li><a href="../moods/chill.html">😌 Chill</a></li>
+                        <li><a href="../moods/focused.html">🧠 Focused</a></li>
+                        <li><a href="../moods/angry.html">😡 Angry</a></li>
+                        <li><a href="../moods/nostalgic.html">🕰️ Nostalgic</a></li>
+                        <li><a href="../moods/sleepy.html">😴 Sleepy</a></li>
+                        <li><a href="../moods/confident.html">😎 Confident</a></li>
+                        <li><a href="../moods/mysterious.html">🕵️ Mysterious</a></li>
+                        <li><a href="../moods/determined.html">💪 Determined</a></li>
+                        <li><a href="../moods/playful.html">🥳 Playful</a></li>
+                        <li><a href="../moods/anxious.html">😬 Anxious</a></li>
+                        <li><a href="../moods/bored.html">🥱 Bored</a></li>
+                        <li><a href="../moods/calm.html">🧘 Calm</a></li>
+                        <li><a href="../moods/reflective.html">🤔 Reflective</a></li>
+                        <li><a href="../moods/grateful.html">🙏 Grateful</a></li>
+                        <li><a href="../moods/elegant.html">🥂 Elegant</a></li>
+                        <li><a href="../moods/chaotic.html">💥 Chaotic</a></li>
+                        <li><a href="../moods/weird.html">👽 Weird</a></li>
+                        <li><a href="../moods/humble.html">🕊️ Humble</a></li>
+                        <li><a href="../moods/spiritual.html">✨ Spiritual</a></li>
+                        <li><a href="../moods/epic.html">⚔️ Epic</a></li>
+                        <li><a href="../moods/sensual.html">🔥 Sensual</a></li>
+                        <li><a href="../moods/vintage.html">📻 Vintage</a></li>
+                        <li><a href="../moods/wanderlust.html">🗺️ Wanderlust</a></li>
+                    </ul>
+                </li>
+                
+                
+                
+                <li><a href="../recommend/submit.html">✨ Recommend a Song</a></li>
+                <li><a href="#">Future Updates!</a></li>
+                
+                <hr id="admin-separator" class="hidden-control">
+                
+                <li id="admin-controls-section" class="hidden-control">
+                    <a href="#">🛠 Admin Controls ▼</a>
+                    <ul class="submenu">
+                        <li style="padding: 0; margin-top: 5px;">
+                            <button id="reset-recs-btn" class="admin-control-button"
+                                     style="width: 100%; border-radius: 0; background-color: #d9534f;">
+                                Reset Weekly Recommendations
+                            </button>
+                        </li>
+                        <li><a href="../admin/review.html">Review Submissions</a></li>
+                        <li><a href="../admin/settings.html">Site Settings</a></li>
+                        <li><a href="../admin/user-ratings.html">⭐️ User Ratings</a></li>
+                        <li><a href="../admin/playlist-editor.html">⚙️ Playlist Editor</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <h2>🏆 Weekly Top 50 Songs</h2>
+        <p>The 50 most played songs across all mood playlists this week. This count resets every Monday.</p>
+        
+        <section id="chart-list" class="content-section">
+            <div id="chart-header">
+                <h3>Global Weekly Hit List</h3>
+            </div>
+            <ul data-source="charts/weekly">
+                <li>Chart is loading...</li>
+            </ul>
+        </section>
+
+        <section id="player-section">
+            <h3>Now Playing</h3>
+            <div id="player-content" class="player-container">
+                <p>Click 'Play Now' on a song to load the player.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>

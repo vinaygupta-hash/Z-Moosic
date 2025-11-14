@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-MOOSIC - Recommend a Song ✨</title>
+    <link rel="stylesheet" href="../style.css">
+    
+    <script src="../data.js"></script>
+    <script src="../scripts.js" defer></script>
+</head>
+
+<body>
+
+    <div id="sidebar-trigger"></div>
+
+    <header>
+        <h1>Z-MOOSIC</h1>
+        <button id="admin-toggle">Admin: OFF</button>
+    </header>
+
+    <aside id="sidebar">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                
+                <li id="charts-menu-item">
+                    <a href="#">📈 Z-MOOSIC Charts ▼</a>
+                    <ul class="submenu">
+                        <li><a href="../charts/daily.html">🔥 Daily Chart</a></li>
+                        <li><a href="../charts/weekly.html">🏆 Weekly Chart</a></li>
+                    </ul>
+                </li>
+                
+                <li id="top-songs-menu-item">
+                    <a href="#">Moods ▼</a>
+                    <ul class="submenu">
+                        <li><a href="../moods/happy.html">😄 Happy</a></li>
+                        <li><a href="../moods/sad.html">😭 Sad</a></li>
+                        <li><a href="../moods/romantic.html">💖 Romantic</a></li>
+                        <li><a href="../moods/energetic.html">⚡️ Energetic</a></li>
+                        <li><a href="../moods/chill.html">😌 Chill</a></li>
+                        <li><a href="../moods/focused.html">🧠 Focused</a></li>
+                        <li><a href="../moods/angry.html">😡 Angry</a></li>
+                        <li><a href="../moods/nostalgic.html">🕰️ Nostalgic</a></li>
+                        <li><a href="../moods/sleepy.html">😴 Sleepy</a></li>
+                        <li><a href="../moods/confident.html">😎 Confident</a></li>
+                        <li><a href="../moods/mysterious.html">🕵️ Mysterious</a></li>
+                        <li><a href="../moods/determined.html">💪 Determined</a></li>
+                        <li><a href="../moods/playful.html">🥳 Playful</a></li>
+                        <li><a href="../moods/anxious.html">😬 Anxious</a></li>
+                        <li><a href="../moods/bored.html">🥱 Bored</a></li>
+                        <li><a href="../moods/calm.html">🧘 Calm</a></li>
+                        <li><a href="../moods/reflective.html">🤔 Reflective</a></li>
+                        <li><a href="../moods/grateful.html">🙏 Grateful</a></li>
+                        <li><a href="../moods/elegant.html">🥂 Elegant</a></li>
+                        <li><a href="../moods/chaotic.html">💥 Chaotic</a></li>
+                        <li><a href="../moods/weird.html">👽 Weird</a></li>
+                        <li><a href="../moods/humble.html">🕊️ Humble</a></li>
+                        <li><a href="../moods/spiritual.html">✨ Spiritual</a></li>
+                        <li><a href="../moods/epic.html">⚔️ Epic</a></li>
+                        <li><a href="../moods/sensual.html">🔥 Sensual</a></li>
+                        <li><a href="../moods/vintage.html">📻 Vintage</a></li>
+                        <li><a href="../moods/wanderlust.html">🗺️ Wanderlust</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="submit.html" class="active">✨ Recommend a Song</a></li>
+                <li><a href="#">Future Updates!</a></li>
+                
+                <hr id="admin-separator" class="hidden-control">
+                
+                <li id="admin-controls-section" class="hidden-control">
+                    <a href="#">🛠 Admin Controls ▼</a>
+                    <ul class="submenu">
+                        <li style="padding: 0; margin-top: 5px;">
+                            <button id="reset-recs-btn" class="admin-control-button"
+                                    style="width: 100%; border-radius: 0; background-color: #d9534f;">
+                                Reset Weekly Recommendations
+                            </button>
+                        </li>
+                        <li><a href="../admin/review.html">Review Submissions</a></li>
+                        <li><a href="../admin/settings.html">Site Settings</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <h2>Recommend a Song for the Playlist! 📝</h2>
+        <p>Help shape the Z-MOOSIC community by submitting your favorite tracks. The most recommended songs will be manually reviewed and added to the curated playlists!</p>
+        
+        <form id="recommendation-form" class="content-section">
+
+            <div class="form-group">
+                <label for="song-name">Song Name *</label>
+                <input type="text" id="song-name" name="song_name" placeholder="E.g., Walking on Sunshine" required>
+            </div>
+
+            <div class="form-group">
+                <label for="artist-name">Artist Name *</label>
+                <input type="text" id="artist-name" name="artist_name" placeholder="E.g., Katrina & The Waves" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="song-link">Spotify/YouTube Link *</label>
+                <input type="url" id="song-link" name="song_link" placeholder="Paste the link to the song here (e.g., Spotify URL)" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mood-selection">Intended Mood *</label>
+                <select id="mood-selection" name="mood_selection" required>
+                    <option value="" disabled selected>Select a mood category...</option>
+                    <option value="happy">Happy 😄</option>
+                    <option value="sad">Sad 😭</option>
+                    <option value="romantic">Romantic 💖</option>
+                    <option value="energetic">Energetic ⚡️</option>
+                    <option value="chill">Chill 😌</option>
+                    <option value="focused">Focused 🧠</option>
+                    <option value="angry">Angry 😡</option>
+                    <option value="nostalgic">Nostalgic 🕰️</option>
+                    <option value="sleepy">Sleepy 😴</option>
+                    <option value="confident">Confident 😎</option>
+                    <option value="mysterious">Mysterious 🕵️</option>
+                    <option value="determined">Determined 💪</option>
+                    <option value="playful">Playful 🥳</option>
+                    <option value="anxious">Anxious 😬</option>
+                    <option value="bored">Bored 🥱</option>
+                    <option value="calm">Calm 🧘</option>
+                    <option value="reflective">Reflective 🤔</option>
+                    <option value="grateful">Grateful 🙏</option>
+                    <option value="elegant">Elegant 🥂</option>
+                    <option value="chaotic">Chaotic 💥</option>
+                    <option value="weird">Weird 👽</option>
+                    <option value="humble">Humble 🕊️</option>
+                    <option value="spiritual">Spiritual ✨</option>
+                    <option value="epic">Epic ⚔️</option>
+                    <option value="sensual">Sensual 🔥</option>
+                    <option value="vintage">Vintage 📻</option>
+                    <option value="wanderlust">Wanderlust 🗺️</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="intensity-selection">Emotional Impact (How intense is the feeling?)</label>
+                <select id="intensity-selection" name="intensity_selection">
+                    <option value="low">Low - Background / Subtle</option>
+                    <option value="medium" selected>Medium - Noticeable / Steady</option>
+                    <option value="high">High - Powerful / Emotional Peak</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="era-selection">What era does the song feel like?</label>
+                <select id="era-selection" name="era_selection">
+                    <option value="current" selected>Current (2020s)</option>
+                    <option value="2010s">2010s</option>
+                    <option value="2000s">2000s</option>
+                    <option value="90s">1990s</option>
+                    <option value="classic">Classic (Pre-1990)</option>
+                    <option value="timeless">Timeless / Hard to place</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="recommendation-reason">What memory or feeling does this song give you? (Optional)</label>
+                <textarea id="recommendation-reason" name="recommendation_reason" rows="3" placeholder="Tell us why this song fits the chosen mood so well!"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="cover-link">Cover Art URL (Optional)</label>
+                <input type="url" id="cover-link" name="cover_link" placeholder="Link to album art (e.g., a high-res image URL)">
+                <small>If provided, this image will be used for the playlist card.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="user-alias">Your Name/Alias (Optional)</label>
+                <input type="text" id="user-alias" name="user_alias" placeholder="E.g., Z-Moosic Fan #1">
+            </div>
+
+            <button type="submit" id="submit-recommendation">Submit Recommendation</button>
+            
+        </form>
+        
+        <div id="form-message"></div>
+        
+    </main>
+    
+    <footer id="now-playing-bar">
+        <div id="player-content">
+            <p>Click a song to start playing!</p>
+        </div>
+        <div id="controls-placeholder" style="display:none;">
+            <p>Custom controls will go here in a future update!</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
